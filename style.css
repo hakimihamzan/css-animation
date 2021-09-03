@@ -1,0 +1,49 @@
+body {
+  background: lightblue;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+img {
+  /* transform: translateX(200px); move to the right from the original position ---- positive to right , negative to left*/
+  /* transform: translateY(200px);  move down from original position  ---------- positive to down , negative to up */
+  /* transform: translate(-200px, 200px); move to left then down (x, y)  */
+
+  /* transform: scaleX(3); 3 times as big on horizontal line  */
+  /* transform: scaleY(0.5); half of what it use to be on vertical line  */
+  /* transform: scale(1, 2); (x,y)  */
+
+  /* transform: rotateX(80deg); moving along x-axis  */
+  /* transform: rotate(20, 20); x, y*/
+  /* transform: rotateZ(45deg); rotate clackwise 45 deg  */
+  /* transform: rotateZ(-45deg); rotate anti clockwise  */
+
+  /* transform: rotateZ(-90deg) translateX(200px); it follows the element, rotate first (anti-clockwise then move right) */
+  /* transform: rotateZ(-90deg) translateY(200px); */
+}
+
+/* transition is the animation occuring during on state to another state, e.g hover state below  */
+
+.circle {
+  width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: pink;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  /* this is going to affect evrything that is going to change on this element  */
+  /* here background will change first because transform have delay of 1s -- total animation time 1.3s */
+  transition: background 1s, transform 0.3s 1s ease;
+}
+
+.circle:hover {
+  transform: rotate(360deg);
+  background: salmon;
+}
